@@ -7,7 +7,7 @@ const fs = require('fs')
 const SERVER_PORT = 8080;
 const API_HOST = process.env.DAVRA_API_HOST
 
-const token = fs.readFileSync('/etc/connecthing-api/token')
+const token = process.env.DAVRA_API_TOKEN || ''
 // App
 const app = express();
 
